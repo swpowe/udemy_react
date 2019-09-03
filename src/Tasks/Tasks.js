@@ -1,14 +1,12 @@
 import React from 'react';
 import Task from './Task';
-// import results from 'json!./userData.json';
-import results from './userData.json';
+import jsonData from './userData.json';
+
 
 const tasks = () => {
     let shade = true;
     const lineShade = () => {
         let value = '';
-        // if shade is true, set it false and return falue 'shade'
-        // if shade is false, set it true and return value ''
         if (shade) {
             value = ''
             shade = false;
@@ -18,19 +16,7 @@ const tasks = () => {
         }
         return value;
     }
-// const jsonData = require('src/Tasks/userData.json');
-console.log(results);
-    // const morePeople = () => {
-    //     const apiURL = 'https://randomuser.me/api/?results=10&format=csv&inc=name,dob,id,picture';
-    //     let Httpreq = new XMLHttpRequest();
-    //     Httpreq.open("GET", apiURL, false);
-    //     Httpreq.send(null);
-    //     return Httpreq.responseText;
-    // }
-
-    // const jsonData = JSON.parse(morePeople);
-    // console.log(jsonData);
-
+   
     const people = [
         {
             name: 'Spencer',
@@ -65,17 +51,17 @@ console.log(results);
 
     ]
 
-    const listItems = people.map((person) =>
+    const listItems = jsonData.results.map((person) =>
         <Task
             key={person}
-            name={person.name}
-            age={person.age}
-            eyeColor={person.eyeColor}
+            name={person.name.first}
+            age={person.dob.age}
+            eyeColor={person.id.name}
             line={lineShade()}
         />
     );
 
-
+    console.log(jsonData.results[0])
 
     return (
         <div className='flex_container'>
