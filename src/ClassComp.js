@@ -12,7 +12,8 @@ class ClassComp extends Component {
     handleToggleState() {
         console.log('called')
         this.setState( {
-            enabled : !this.state.enabled
+            enabled : !this.state.enabled,
+            name : 'Camille'
         })
     }
 

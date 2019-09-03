@@ -1,3 +1,45 @@
 .App {
   text-align: center;
 }
+
+.Header {
+  color: aquamarine;
+}
+
+.flex_line {
+  display: flex;
+  /* align-content: space-around; */
+}
+
+/* .flex_container {
+  display: flex;
+  align-content: center;
+} */
+
+
+.flex_item {
+  /* flex-grow: 1; */
+  flex-basis: 25px;
+  text-align: left;
+  /* border: 1px solid red; */
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.name {
+  flex-grow: 5;
+}
+
+.age {
+  text-align: center;
+}
+
+.eyeColor {
+  text-align: right;
+  /* padding-right: 20px; */
+}
+
+.shade {
+  background-color: rgba(116, 193, 235, 0.45);
+  color: white;
+}
