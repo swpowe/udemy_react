@@ -1,9 +1,9 @@
 import React from 'react';
 import Task from './Task';
-import jsonData from './userData.json';
+// import jsonData from './userData.json';
 
 
-const tasks = () => {
+const tasks = (props) => {
     let shade = true;
     const lineShade = () => {
         let value = '';
@@ -16,42 +16,44 @@ const tasks = () => {
         }
         return value;
     }
+
    
-    const people = [
-        {
-            name: 'Spencer',
-            age: '39',
-            eyeColor: 'blue'
-        },
-        {
-            name: 'Camille',
-            age: '39',
-            eyeColor: 'brown'
-        },
-        {
-            name: 'Ethan',
-            age: '17',
-            eyeColor: 'hazel'
-        },
-        {
-            name: 'Spencer',
-            age: '39',
-            eyeColor: 'blue'
-        },
-        {
-            name: 'Camille',
-            age: '39',
-            eyeColor: 'brown'
-        },
-        {
-            name: 'Ethan',
-            age: '17',
-            eyeColor: 'hazel'
-        }
+    // const people = [
+    //     {
+    //         name: 'Spencer',
+    //         age: '39',
+    //         eyeColor: 'blue'
+    //     },
+    //     {
+    //         name: 'Camille',
+    //         age: '39',
+    //         eyeColor: 'brown'
+    //     },
+    //     {
+    //         name: 'Ethan',
+    //         age: '17',
+    //         eyeColor: 'hazel'
+    //     },
+    //     {
+    //         name: 'Spencer',
+    //         age: '39',
+    //         eyeColor: 'blue'
+    //     },
+    //     {
+    //         name: 'Camille',
+    //         age: '39',
+    //         eyeColor: 'brown'
+    //     },
+    //     {
+    //         name: 'Ethan',
+    //         age: '17',
+    //         eyeColor: 'hazel'
+    //     }
 
-    ]
-
-    const listItems = jsonData.results.map((person) =>
+    // ]
+    
+    if(props.loaded) {
+        const listItems = props.data.results.map((person) =>
         <Task
             key={person}
             name={person.name.first}
@@ -60,12 +62,19 @@ const tasks = () => {
             line={lineShade()}
         />
     );
-
-    console.log(jsonData.results[0])
-
+    console.log(props.data.results);
     return (
         <div className='flex_container'>
             <div>{listItems}</div>
+        </div>
+    );
+    }
+    
+
+
+    return (
+        <div className='flex_container'>
+            <div>Loadeing user data....</div>
         </div>
     );
 }

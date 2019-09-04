@@ -11,9 +11,21 @@ class App extends React.Component {
     super();
     this.state = {
       name : 'Spencer',
-      longName : 'Camille Rose Powell'
+      longName : 'Camille Rose Powell',
+      data : {},
+      loaded : false
     }
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount() {
+    fetch('https://randomuser.me/api/?results=50&format=JSON&inc=name,dob,id,picture')
+      .then(response => response.json())
+      .then(data => this.setState({ 
+        data : data,
+        loaded : true
+      }))
+      
   }
 
   handleClick() {
@@ -29,7 +41,7 @@ class App extends React.Component {
         <Header name={this.state.name} enabled={true}/>
         <ClassComp />
         <Person name={this.state.longName} handleClick={this.handleClick}/>
-        <Tasks />
+        <Tasks data={this.state.data} loaded={this.state.loaded}/>
       </div>
     );
   }
