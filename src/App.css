@@ -11,6 +11,8 @@
   /* background: purple; */
   padding: 10px 0;
   /* align-content: space-around; */
+  align-items: center;
+  /* justify-content: center; */
 }
 
 /* .flex_container {
@@ -21,19 +23,21 @@
 
 .flex_item {
   /* flex-grow: 1; */
+  /* display: flex; */
   font-family: Lato, sans-serif;
   font-size: 16px;
   font-weight: 400;
   flex-basis: 25px;
   text-align: left;
+  /* align-items: center; */
   /* border: 1px solid red; */
   /* padding: 10px; */
   flex-grow: 1;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */ /*this helps but isn't great*/ 
   /* line-height: 2.5em; */
   border-bottom: 1px solid #dee2e6;
   line-height: 24px;
-  /* padding-top: 10px; */
+  /* padding-top: 10px; */ /*this helps but isn't great*/ 
 }
 
 .name {
@@ -47,6 +51,7 @@
 }
 
 .eyeColor {
+  /* line-height: 24px; */
   text-align: right;
   padding-right: 10px;
 }
@@ -60,9 +65,11 @@
 .box {
   flex-grow: .25;
   /* align-content: center; */
-  background: yellow;
+  /* background: yellow; */
   /* text-align: center; */
   /* border-radius: 50%; */
+  border-bottom: 0px;
+  
 }
 
 
@@ -72,7 +79,7 @@
   border-radius: 50%;
   padding-bottom: 0px;
   border-bottom: 0px;
-  background: plum;
+  /* background: plum; */
   /* vertical-align: middle; */
   /* margin-right: 1em; */
   color: white;
@@ -94,4 +101,12 @@
  /* align-content: center; */
  /* margin: 5px; */
  margin-left: 15px;
+ line-height: 40px;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+  max-width: 1110px;
+
 }

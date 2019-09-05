@@ -64,7 +64,7 @@ const tasks = (props) => {
     );
     console.log(props.data.results);
     return (
-        <div className='flex_container'>
+        <div className='container'>
             <div>{listItems}</div>
         </div>
     );
@@ -73,7 +73,7 @@ const tasks = (props) => {
 
 
     return (
-        <div className='flex_container'>
+        <div className='container'>
             <div>Loadeing user data....</div>
         </div>
     );
