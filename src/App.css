@@ -10,9 +10,11 @@
   display: flex;
   /* background: purple; */
   padding: 10px 0;
+  padding-right: 15px;
   /* align-content: space-around; */
   align-items: center;
   /* justify-content: center; */
+  border-bottom: 1px solid #dee2e6;
 }
 
 /* .flex_container {
@@ -35,9 +37,10 @@
   flex-grow: 1;
   /* padding-bottom: 10px; */ /*this helps but isn't great*/ 
   /* line-height: 2.5em; */
-  border-bottom: 1px solid #dee2e6;
+  /* border-bottom: 1px solid #dee2e6; */
   line-height: 24px;
   /* padding-top: 10px; */ /*this helps but isn't great*/ 
+
 }
 
 .name {
@@ -53,7 +56,9 @@
 .eyeColor {
   /* line-height: 24px; */
   text-align: right;
-  padding-right: 10px;
+  padding-right: 100px;
+  flex-grow: 1;
+
 }
 
 .shade {
@@ -109,4 +114,40 @@
   width: 80%;
   max-width: 1110px;
 
+}
+
+.button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+  outline: inherit;
+  padding: 0px 10px;
+  opacity: 0.4;
+  
+  /* width: 1em; */
+}
+
+.headers {
+  border-bottom: 2.5px solid #dee2e6;
+}
+.header1 {
+  padding-right: 20px;
+}
+.header2 {
+  padding-left: 25px;
+}
+.header3 {
+  padding-right: 170px;
+}
+
+a:hover {
+  background-color: gray;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

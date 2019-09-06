@@ -65,6 +65,11 @@ const tasks = (props) => {
     console.log(props.data.results);
     return (
         <div className='container'>
+            <div className='flex_line headers'>
+                <h1 className='flex_item name header1'>Name</h1>
+                <h1 className='flex_item age header2'>Class Code</h1>
+                <h1 className='flex_item eyeColor header3'>ID</h1>
+            </div>
             <div>{listItems}</div>
         </div>
     );
