@@ -4,6 +4,7 @@ import Header from './Header';
 import ClassComp from './ClassComp';
 import Person from './Person/Person'; // Person could be anything. could also create alias
 import Tasks from './Tasks/Tasks';
+import HelloWorld from './Portal/Playground';
 
 class App extends React.Component {
 
@@ -38,10 +39,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header name={this.state.name} enabled={true}/>
+        {/* <Header name={this.state.name} enabled={true}/>
         <ClassComp />
         <Person name={this.state.longName} handleClick={this.handleClick}/>
-        <Tasks data={this.state.data} loaded={this.state.loaded}/>
+        <Tasks data={this.state.data} loaded={this.state.loaded}/> */}
+        <HelloWorld />
       </div>
     );
   }
